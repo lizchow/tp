@@ -259,6 +259,7 @@ Examples:
 * `find properties t/4rm t/near school` returns properties `jurong [4rm] [near school] [near mrt]` and `Clementi [4rm] [near school] [near mrt]`
 * `find buyers Sally t/4rm t/near school` returns buyers `Sally [4rm] [near school] [quiet]` and `sally brown [4rm] [near school]`
 * `find properties $min/10000 $max/1000000` returns properties that are at least $10000 and at most $1000000
+
 ------------------
 
 ### Deleting a property/buyer : `delete`
