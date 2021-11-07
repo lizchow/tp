@@ -210,12 +210,12 @@ Under the [`find` command](#locating-propertiesbuyers-by-name-tags-price-find), 
 ## Valid properties/buyers
 Here are some fields that are shared amongst commands.
 
-### Property/Buyer names: `n/`
+### Property/Buyer names
 * Names must start with a letter or number, and only contain alphanumerical characters, spaces and hyphens (`-`).
 * Names have a maximum allowed length of 50.
 * Buyers with identical names are not allowed.
 
-### Property addresses: `a/`
+### Property addresses
 * Addresses must start with a letter or number, and only contain alphanumerical characters, and the following special characters:
   * spaces,
   * hyphens (`-`),
@@ -225,11 +225,11 @@ Here are some fields that are shared amongst commands.
 * Addresses have a maximum allowed length of 100.
 * Properties with identical addresses are not allowed.
 
-### Property Prices/Buyer Budget: `$/`
+### Property Prices/Buyer Budget
 * Prices must be between 4 and 9 digits (both inclusive).
 * Leading zeroes will be ignored. For e.g., `00100` has 5 characters, but it only has 3 digits, not counting the leading 0s. Hence, `00100` is an invalid price.
 
-### Phone numbers: `p/`
+### Phone numbers
 * Phone number should only contain alphanumeric characters, hyphens (`-`), parentheses (`()`), plus signs (`+`) and spaces.
 * Phone numbers must have at least 3 characters, excluding leading and trailing spaces
   * Valid: 
@@ -240,7 +240,7 @@ Here are some fields that are shared amongst commands.
     * <code>&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</code> (Excluding leading and trailing spaces, the phone number only contains 1 character)
     * `#123` (contains invalid hash symbol)
 
-### Tags: `t/`, `ta/`, `td/`
+### Tags
 * Tags are always optional.
 * Tags must start with a letter or number, and only contain alphanumerical characters, spaces and hyphens (`-`).
 * Tags have a maximum allowed length of 100.
