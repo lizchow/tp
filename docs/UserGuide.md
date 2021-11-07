@@ -1,4 +1,4 @@
----
+****---
 layout: page
 title: User Guide
 ---
@@ -370,7 +370,7 @@ Examples:
 * `find property Jurong`
   * Returns properties `jurong` and `Jurong East`
 * `find buyer Sally` 
-  * Returns buyer `sally` and `Sally Brown`
+  * Returns buyers `sally` and `Sally Brown`
 * `find property Jurong t/4rm t/near school` 
   * Returns properties `jurong [4rm] [near school] [near mrt]` and `Jurong East [4rm] [near school] [near mrt]` but not `jurong [4rm] [near mrt]`
 * `find property t/4rm t/near school` 
@@ -468,7 +468,7 @@ Example:
       * Richard has tags `5rm`, `far from school`
       * Sam has tag `4rm`
       * Tim has tags `4rm`, `near school`
-    * The tag compatibility will be ranked in this order (most to least compatible): Tim, Sam, Richard. 
+    * Order of tag compatibility (most to least compatible): Tim, Sam, Richard. 
     * Tim has the greatest number of tags in common and is the most desirable buyer match, whereas Richard has the least number of tags in common and is the least desirable buyer match.
 
 #### One to many matching of buyer to properties
@@ -483,7 +483,7 @@ Format: `match buyer INDEX`
 * Similar to `match property`, the matching for `match buyer` is done on the currently displayed property list. You can use the `list` command to reset the display lists to display all the available properties before using `match buyer`.
 
 Example:
-* `match buyer 2` will match all displayed properties with the second displayed buyer. Suppose the second displayed budget of `1,000,000` and has tags `4rm`, `near school`.
+* `match buyer 2` will match all displayed properties with the second displayed buyer. Suppose the second displayed buyer has budget of `1,000,000` and has tags `4rm`, `near school`.
     * Budget Compatibility:
         * Compatible properties: 
           * All properties with selling price at most `1,000,000` 
@@ -496,7 +496,7 @@ Example:
             * Dee Gardens has tags `5rm`, `far from school`
             * Olive Gardens has tag `4rm`
             * Pear Gardens has tags `4rm`, `near school`
-        * The tag compatibility will be ranked in this order (most to least compatible): Pear Gardens, Olive Gardens, Dee Gardens.
+        * Order of tag compatibility (most to least compatible): Pear Gardens, Olive Gardens, Dee Gardens.
         * Pear Gardens has the greatest number of tags in common and is the most desirable property match, whereas Dee Gardens has the least number of tags in common and is the least desirable property match.
 
 #### Intelligent matching of properties and buyers
@@ -598,4 +598,4 @@ You may copy and paste multiple lines of commands into the command box. Press th
 ## FAQ
 
 **Q**: How do I transfer my data to another Computer?<br>
-**A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous PropertyWhiz home folder.
+**A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous PropertyWhiz home folder.****
