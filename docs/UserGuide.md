@@ -256,7 +256,7 @@ Don't worry if your first few commands fail! PropertyWhiz's [output box](#naviga
 
 ### Viewing help : `help`
 
-Shows a message explaning how to access the help page.
+Shows a message explaining how to access the help page.
 
 ![help message](images/helpMessage.png)
 
@@ -308,12 +308,18 @@ Format:
 * Editing a buyer: `edit buyer INDEX [n/BUYER_NAME] [p/BUYER_PHONE] [e/BUYER_EMAIL] [$/BUDGET] [([t/TAG]… | [ta/TAG_TO_ADD]… [td/TAG_TO_DELETE]…)]`
 
 Examples:
-* `edit property 1 p/91234567 e/johndoe@example.com` Edits the phone number and email address of the 1st property to be `91234567` and `johndoe@example.com` respectively.
-* `edit property 2 n/Blk 298 Toa Payoh Central t/` Edits the name of the 2nd property to be `Blk 298 Toa Payoh Central` and clears all existing tags.
-* `edit buyer 1 p/91234567 e/johndoe@example.com` Edits the phone number and email address of the 1st buyer to be `91234567` and `johndoe@example.com` respectively.
-* `edit property 1 ta/4rm ta/near mrt` Edits the tag list of the 1st property by adding two tags called "4rm" and "near mrt" if they are not already present in the original tag list.
-* `edit property 1 ta/4rm td/near mrt` Edits the tag list of the 1st property by adding a tag called "4rm" if it does not already exist in the original tag list and removing a tag called "near mrt" if it is present in the original tag list.
-* `edit property 1 ta/near MRT` Edits the tag list of the 1st property by adding a tag called `near mrt` if it does not already exist in the original tag list. Notice that the case of `MRT` is lowered to `mrt`.
+* `edit property 1 p/91234567 e/johndoe@example.com`
+  * Edits the phone number and email address of the 1st property to be `91234567` and `johndoe@example.com` respectively.
+* `edit property 2 n/Blk 298 Toa Payoh Central t/` 
+  * Edits the name of the 2nd property to be `Blk 298 Toa Payoh Central` and clears all existing tags.
+* `edit buyer 1 p/91234567 e/johndoe@example.com` 
+  * Edits the phone number and email address of the 1st buyer to be `91234567` and `johndoe@example.com` respectively.
+* `edit property 1 ta/4rm ta/near mrt` 
+  * Edits the tag list of the 1st property by adding two tags called "4rm" and "near mrt" if they are not already present in the original tag list.
+* `edit property 1 ta/4rm td/near mrt`
+  * Edits the tag list of the 1st property by adding a tag called "4rm" if it does not already exist in the original tag list and removing a tag called "near mrt" if it is present in the original tag list.
+* `edit buyer 1 ta/near MRT`
+  * Edits the tag list of the 1st buyer by adding a tag called `near mrt` if it does not already exist in the original tag list. Notice that the case of `MRT` is lowered to `mrt`.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 The following example is invalid:
@@ -345,7 +351,7 @@ Format: `find (property | buyer) [KEYWORDS] [t/TAG_TO_MATCH]… [$min/MIN_PRICE]
 
 * Finds only properties or buyers in the currently displayed list
   * e.g. If `find property hillview` return properties `Hillview` and `Hillview Rise`, then applying another find command `find property grove` will return an empty list, even if PropertyWhiz has a property `Grove`.
-* The keyword search is case-insensitive. e.g `hillview` will match `Hillview`
+* The keyword search is case-insensitive. e.g. `hillview` will match `Hillview`
 * The order of the keywords does not matter. e.g. `Hillview Rise` will match `Rise Hillview`
 * Only full words will be matched e.g. `Hill` will not match `Hillview`
 * The tag search is case-insensitive, e.g. both `t/mrt`, `t/MRT` will match the `mrt` tag.
@@ -361,12 +367,18 @@ Format: `find (property | buyer) [KEYWORDS] [t/TAG_TO_MATCH]… [$min/MIN_PRICE]
   * e.g. `find property $min/10000 $min/1999999 $max/100000` is invalid
   
 Examples:
-* `find property Jurong` returns properties `jurong` and `Jurong East`
-* `find buyer Sally` returns buyer `sally` and `Sally Brown`
-* `find property Jurong t/4rm t/near school` returns properties `jurong [4rm] [near school] [near mrt]` and `Jurong East [4rm] [near school] [near mrt]` but not `jurong [4rm] [near mrt]`
-* `find property t/4rm t/near school` returns properties `jurong [4rm] [near school] [near mrt]` and `Clementi [4rm] [near school] [near mrt]`
-* `find buyer Sally t/4rm t/near school` returns buyer `Sally [4rm] [near school] [quiet]` and `sally brown [4rm] [near school]`
-* `find property $min/10000 $max/1000000` returns properties that are at least $10000 and at most $1000000
+* `find property Jurong`
+  * Returns properties `jurong` and `Jurong East`
+* `find buyer Sally` 
+  * Returns buyer `sally` and `Sally Brown`
+* `find property Jurong t/4rm t/near school` 
+  * Returns properties `jurong [4rm] [near school] [near mrt]` and `Jurong East [4rm] [near school] [near mrt]` but not `jurong [4rm] [near mrt]`
+* `find property t/4rm t/near school` 
+  * Returns properties `jurong [4rm] [near school] [near mrt]` and `Clementi [4rm] [near school] [near mrt]`
+* `find buyer Sally t/4rm t/near school` 
+  * Returns buyers `Sally [4rm] [near school] [quiet]` and `sally brown [4rm] [near school]`
+* `find property $min/10000 $max/1000000` 
+  * Returns properties that are at least $10000 and at most $1000000
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 
@@ -407,8 +419,10 @@ Format: `sort (property | buyer) (price | name) (asc | desc)`
 
 Examples:
 
-* `sort property price asc` returns the property list sorted by price in ascending order
-* `sort buyer name desc` returns the buyer list sorted by name in descending order
+* `sort property price asc` 
+  * Returns the property list sorted by price in ascending order
+* `sort buyer name desc` 
+  * Returns the buyer list sorted by name in descending order
 
 ### Matching properties and buyers: `match`
 
@@ -443,8 +457,12 @@ You can use the `list` command to reset the display lists to display all the ava
 Example:
 * `match property 2` will match all displayed buyers with the second displayed property. Suppose the second displayed property has a selling price of `1,000,000` and has tags `4rm`, `near school`.
   * Price Compatibility:
-    * Compatible buyers: All buyers whose budget is at least `1,000,000` (e.g. A buyer whose budget is `1,100,000` is compatible)
-    * Incompatible buyers: All buyers whose budget is lower than `1,000,000` (e.g. A buyer whose budget is `900,000` is not compatible)
+    * Compatible buyers: 
+      * All buyers whose budget is at least `1,000,000` 
+      * e.g. A buyer whose budget is `1,100,000` is compatible
+    * Incompatible buyers: 
+      * All buyers whose budget is lower than `1,000,000` 
+      * e.g. A buyer whose budget is `900,000` is not compatible
   * Tag Compatibility:
     * Suppose we have 3 buyers:
       * Richard has tags `5rm`, `far from school`
@@ -467,8 +485,12 @@ Format: `match buyer INDEX`
 Example:
 * `match buyer 2` will match all displayed properties with the second displayed buyer. Suppose the second displayed budget of `1,000,000` and has tags `4rm`, `near school`.
     * Budget Compatibility:
-        * Compatible properties: All properties with selling price at most `1,000,000` (e.g. A property with selling price of `900,000` is compatible)
-        * Incompatible properties: All properties with selling price larger than `1,000,000` (e.g. A property with selling price of `1,100,000` is not compatible)
+        * Compatible properties: 
+          * All properties with selling price at most `1,000,000` 
+          * e.g. A property with selling price of `900,000` is compatible
+        * Incompatible properties: 
+          * All properties with selling price larger than `1,000,000` 
+          * e.g. A property with selling price of `1,100,000` is not compatible
     * Tag Compatibility:
         * Suppose we have 3 properties:
             * Dee Gardens has tags `5rm`, `far from school`
@@ -493,7 +515,7 @@ After running `match auto`, enter `back` into the command box to return to the p
 
 Imports buyers or properties from csv file. Imported items will be added to the front of the **currently displayed list**.
 
-Format: `import buyer` or `import property`
+Format: `import (buyer | property)`
 
 * You can select the import file location from a pop-up dialog box.
 * The buyer or property list imported must be [valid](#valid-propertiesbuyers). Some criteria are as follows:
@@ -508,7 +530,7 @@ See [below](#exporting-data-to-csv-file--export) for example csv files.
 
 Exports buyers or properties in the **currently displayed list** to csv file.
 
-Format: `export buyer` or `export property`
+Format: `export (buyer | property)`
 
 * You can select the export file location from a pop-up dialog box.
 
